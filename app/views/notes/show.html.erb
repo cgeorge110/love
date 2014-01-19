@@ -1,0 +1,14 @@
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+	<h3 class="center shadow">here is your personalized love note:</h3>  
+ 	<h1 class="center shadow note">"<%= h(@note.content) %>"</h1>
+ 	<h3 class="center shadow">all that's left to do is send it...</h3>
+</div>
+</div>
+
+<div class="row" style="margin-top: 1em;">
+	<div class="col-md-10 col-md-offset-1 send">
+		<div class="col-md-6"><%= image_tag( "twitter.svg", size: "100", class: "icon" ) %><p class="center">coming soon...<br>tweet your love</p></div>
+		<div class="col-md-6"><%= image_tag( "email-icon.svg", size: "100", class: "icon" ) %><p class="center">coming soon...<br>email your love</p></div>
+	</div>
+</div>

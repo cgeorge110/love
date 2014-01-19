@@ -1,0 +1,38 @@
+<%- model_class = Note -%>
+<div class="page-header">
+  <h1><%=t "Notes for MadLIb ##{@message.id}" %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:fields) %></th>
+      <th><%= model_class.human_attribute_name(:message_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @Notes.each do |Note| %>
+      <tr>
+        <td><%= link_to Note.id, message_Note_path(@message, Note) %></td>
+        <td><%= Note.fields %></td>
+        <td><%= Note.message_id %></td>
+        <td><%=l Note.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_message_Note_path(@message, Note), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      message_Note_path(@message, Note),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_message_Note_path(@message),
+            :class => 'btn btn-primary' %>
