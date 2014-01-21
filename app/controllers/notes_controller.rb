@@ -1,6 +1,10 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:edit, :update, :destroy, :show]
 
+  def index
+    @notes = Note.all
+  end
+
   def create
     @note = Note.new
     @message = Message.find(params[:message_id])
