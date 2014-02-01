@@ -6,4 +6,7 @@ class WelcomeController < ApplicationController
   	@note = Note.new
   end
 
+  def sent
+  	
+  end
 end

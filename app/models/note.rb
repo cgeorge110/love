@@ -1,5 +1,5 @@
 class Note < ActiveRecord::Base
-
+  has_many :tweets
 
 	# Insert an answer.  'string' is an unparsed string, value is the answer hash.
   def fill_field(string, value)

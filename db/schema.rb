@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140118084349) do
+ActiveRecord::Schema.define(version: 20140201071811) do
 
   create_table "messages", force: true do |t|
     t.text     "message"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20140118084349) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "message_id"
+  end
+
+  create_table "tweets", force: true do |t|
+    t.integer  "note_id"
+    t.string   "to"
+    t.string   "from"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

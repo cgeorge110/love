@@ -8,7 +8,7 @@
 
 <div class="row" style="margin-top: 1em;">
 	<div class="col-md-10 col-md-offset-1 send">
-		<div class="col-md-6"><%= image_tag( "tweet.gif", class: "icon" ) %></div>
+		<div class="col-md-6"><%= link_to image_tag( "tweet.gif", class: "icon" ), new_tweet_path(:note => @note.id) %></div>
 		<div class="col-md-6"><%= image_tag( "email.gif", class: "icon" ) %></div>
 	</div>
 </div>
