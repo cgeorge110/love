@@ -1,14 +1,56 @@
 <div class="row">
 <div class="col-md-10 col-md-offset-1">
 	<h3 class="center shadow">here is your personalized love note:</h3>  
- 	<h1 class="center shadow note">"<%= h(@note.content) %>"</h1>
- 	<h3 class="center shadow">all that's left to do is send it...</h3>
+ 	<h1 class="center shadow note"><div id="the-note">"<%= h(@note.content) %>"</div></h1>
+ 	<h3 class="center shadow to-do">all that's left to do is send it...</h3>
 </div>
 </div>
 
-<div class="row" style="margin-top: 1em;">
-	<div class="col-md-10 col-md-offset-1 send">
-		<div class="col-md-6"><%= link_to image_tag( "tweet.gif", class: "icon" ), new_tweet_path(:note => @note.id) %></div>
-		<div class="col-md-6"><%= image_tag( "email.gif", class: "icon" ) %></div>
+<div class="row send-it" style="margin-top: 1em;">
+	<div class="col-md-6 col-md-offset-3 send">
+		<div class="row">
+			<div class="col-md-6"><%= link_to image_tag( "tweet.gif", class: "icon" ), new_tweet_path(:note => @note.id) %></div>
+			<div class="col-md-6"><%= image_tag( "email.gif", class: "icon" ) %></div>
+		</div>
 	</div>
 </div>
+
+<style>
+#the-note span{
+  display:inline-block;
+  position:relative;
+  top:20px;
+  visibility:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.to-do {
+	visibility: hidden;
+}
+</style>
+
+<script>
+
+var textDiv = $("#the-note"),
+    sentence = textDiv.html().split(""),
+    tl = new TimelineMax(),
+    send = $(".to-do"),
+    sendIt = $(".send-it"),
+    heart = $(".heart"),
+    speed = 0.2; //seconds; 
+
+CSSPlugin.defaultTransformPerspective = 600;    
+TweenLite.set(textDiv, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+
+textDiv.html("");
+
+$.each(sentence, function(index, val) {
+	if(val === " ") {
+		val = "&nbsp;";			}
+	var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textDiv);
+	tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  rotationX:360, transformOrigin:"50% 50% -20"}, index * 0.1);			
+});
+
+tl.to(send, 1, {autoAlpha:1, ease:Back.easeOut}, "+=0.5");
+tl.staggerFrom(sendIt, 2.5, { rotationX:-90, transformOrigin:"50% 0%", ease:Elastic.easeOut}, 0.4);
+
+</script>

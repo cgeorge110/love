@@ -17,7 +17,7 @@
       <% @message.fields.each do |field, amount| %>
         <% amount.times do |count| %>
           <div class="col-md-6 col-md-offset-3">
-            <%= label_tag parse_field_name(field, count + 1) %><br>
+            <%= label_tag field %><br>
             <input type="text" class="form-control input-lg" 
                     name="fields[<%= field %>][]" 
                     id="<%= parse_field_name(field, count + 1)%>"/>
