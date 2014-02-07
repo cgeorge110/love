@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206053350) do
+ActiveRecord::Schema.define(version: 20140207052155) do
 
   create_table "messages", force: true do |t|
     t.text     "message"
@@ -20,12 +20,8 @@ ActiveRecord::Schema.define(version: 20140206053350) do
     t.text     "fields"
   end
 
-  create_table "notes", force: true do |t|
-    t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "message_id"
-  end
+# Could not dump table "notes" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "tweets", force: true do |t|
     t.integer  "note_id"

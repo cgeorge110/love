@@ -1,6 +1,10 @@
 class Note < ActiveRecord::Base
   has_many :tweets
 
+  geocoded_by :ip_address,
+  :latitude => :latitude, :longitude => :longitude
+  after_validation :geocode
+
 	# Insert an answer.  'string' is an unparsed string, value is the answer hash.
   def fill_field(string, value)
     return false unless message.has_field?(string)

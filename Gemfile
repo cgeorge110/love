@@ -6,7 +6,11 @@ gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'twitter'
 
+# authentication
 gem 'sorcery'
+
+# geocoding
+gem 'geocoder'
 
 group :production do
   gem 'pg'

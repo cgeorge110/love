@@ -26,4 +26,11 @@ Lovesya::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # for geo-coding testing ...
+  class ActionDispatch::Request
+    def remote_ip
+      "1.2.3.4"
+    end
+  end
 end

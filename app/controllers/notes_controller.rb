@@ -24,6 +24,8 @@ class NotesController < ApplicationController
     end
 
     @note.content = resolution
+    @note.ip_address = request.ip
+    
     if @note.save
       redirect_to @note, :notice => 'Your note has been created'
     else
