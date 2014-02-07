@@ -20,8 +20,15 @@ ActiveRecord::Schema.define(version: 20140207052155) do
     t.text     "fields"
   end
 
-# Could not dump table "notes" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "notes", force: true do |t|
+    t.string   "content"
+    t.integer  "message_id"
+    t.string   "ip_address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tweets", force: true do |t|
     t.integer  "note_id"
