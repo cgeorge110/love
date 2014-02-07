@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:edit, :update, :destroy, :show]
+  before_filter :require_login, except: [:show]
 
   def index
     @messages = Message.all

@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:edit, :update, :destroy, :show]
+  before_filter :require_login, only: [:index]
 
   def index
     @notes = Note.all
