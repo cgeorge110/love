@@ -1,8 +1,6 @@
 $font-family-sans-serif: 'Arvo', serif;; 
 $font-family-serif: 'Stalemate', cursive;
 $font-size-h1: 8em;
-<<<<<<< HEAD
-
 @media(max-width:767px){ h1: $font-size-h1 * 0.5; }
 @media(min-width:768px){ h1: $font-size-h1 * 0.8; }
 
@@ -17,11 +15,6 @@ $dark-red: #7e131e;
   width: auto; display:inline; 
 } 
 
-=======
-@import "bootstrap";
-$dark-red: #7e131e;
-
->>>>>>> 5c722712d0c26fd7248b0c96e2834c3a075a1f17
 html, body { height: 100%; }
 body { 
 
@@ -91,10 +84,6 @@ body {
 
 .gmap {
 	padding: 0 0 !important;
-}
-
-	padding: 2em;
-	background-color: #a4e7df;
 }
 
 .entries { 
