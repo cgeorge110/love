@@ -14,3 +14,17 @@ Region=us-west-2
 ServiceEndpoint=https://elasticbeanstalk.us-west-2.amazonaws.com
 SolutionStack=64bit Amazon Linux 2013.09 running Ruby 1.9.3
 
+[branches]
+master=somelovenotes-master-en
+
+[branch:master]
+ApplicationVersionName=Sample Application
+EnvironmentName=somelovenotes-master-en
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=LoadBalanced
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\Users\George Family\Documents\lovesya\.elasticbeanstalk\optionsettings.somelovenotes-master-en
+RdsDeletionPolicy=Snapshot
+RdsEnabled=Yes
+RdsSourceSnapshotName=
+

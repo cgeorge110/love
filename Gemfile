@@ -15,10 +15,10 @@ gem 'geocoder'
 # google maps 
 gem 'gmaps4rails'
 
-
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+  #gem 'pg'
+  #gem 'rails_12factor'
+  gem 'mysql2'
 end
 
 # Use sqlite3 as the database for Active Record
