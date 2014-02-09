@@ -1,0 +1,36 @@
+<%= form_for @note, turboform: true do |f| %>
+
+  <% if @note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@note.errors.count, "error") %> prohibited this solution from being saved:</h2>
+
+      <ul>
+      <% @note.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="entries">
+  <div class="row">
+    <%= hidden_field_tag(:message_id, @message.id) %>
+      <% @message.fields.each do |field, amount| %>
+        <% amount.times do |count| %>
+          <div class="col-md-6 col-md-offset-3">
+            <%= label_tag field %><br>
+            <input type="text" class="form-control input-lg" 
+                    name="fields[<%= field %>][]" 
+                    id="<%= parse_field_name(field, count + 1)%>"/>
+          </div>
+        <% end %>
+      <% end %>
+   
+  </div>    
+    
+  <div class="row">
+    <div class="form-actions col-md-4 col-md-offset-3">
+      <%= f.submit "create my love note", :class => 'btn btn-lg btn-danger', :id => 'xcreate' %>
+    </div>
+  </div>
+</div>
+<% end %>

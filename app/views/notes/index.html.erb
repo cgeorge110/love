@@ -1,0 +1,41 @@
+<%- model_class = Note -%>
+<div class="page-header">
+  <h1>Love notes sent:</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:content) %></th>
+      <th><%= model_class.human_attribute_name(:message_id) %></th>
+      <th><%= model_class.human_attribute_name(:ip_address) %></th>
+      <th><%= model_class.human_attribute_name(:latitude) %></th>
+      <th><%= model_class.human_attribute_name(:longitude) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @notes.each do |n| %>
+      <tr>
+        <td><%= link_to n.id, note_path(n.id) %></td>
+        <td><%= n.content %></td>
+        <td><%= n.message_id %></td>
+        <td><%= n.ip_address %></td>
+        <td><%= n.latitude %></td>
+        <td><%= n.longitude %></td>
+        <td><%=l n.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_note_path(n.id), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      note_path(n.id),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

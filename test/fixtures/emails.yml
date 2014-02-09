@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to: MyString
+  to_email: MyString
+  from: MyString
+  from_email: MyString
+  note_id: 1
+
+two:
+  to: MyString
+  to_email: MyString
+  from: MyString
+  from_email: MyString
+  note_id: 1
