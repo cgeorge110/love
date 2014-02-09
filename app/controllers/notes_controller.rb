@@ -37,6 +37,13 @@ class NotesController < ApplicationController
   def show
   end
 
+  def destroy
+    @note.destroy
+    
+      redirect_to note_url
+   
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
