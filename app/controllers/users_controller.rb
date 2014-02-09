@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+<<<<<<< HEAD
   before_filter :require_login
+=======
+ 
+>>>>>>> 5c722712d0c26fd7248b0c96e2834c3a075a1f17
 
   # GET /users
   # GET /users.json

@@ -12,9 +12,12 @@ gem 'sorcery'
 # geocoding
 gem 'geocoder'
 
+<<<<<<< HEAD
 # google maps 
 gem 'gmaps4rails'
 
+=======
+>>>>>>> 5c722712d0c26fd7248b0c96e2834c3a075a1f17
 group :production do
   gem 'pg'
   gem 'rails_12factor'

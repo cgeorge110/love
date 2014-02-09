@@ -8,12 +8,19 @@ Lovesya::Application.routes.draw do
   resources :notes
   resources :messages
   resources :tweets
+<<<<<<< HEAD
   resources :emails
   get '/sent', to: 'welcome#sent'
   get 'login' => 'sessions#new', :as => :login
   post 'logout' => 'sessions#destroy', :as => :logout
   get 'spreading-love' => 'welcome#map', :as => :spread
 
+=======
+  get '/sent', to: 'welcome#sent'
+  get 'login' => 'sessions#new', :as => :login
+  post 'logout' => 'sessions#destroy', :as => :logout
+  
+>>>>>>> 5c722712d0c26fd7248b0c96e2834c3a075a1f17
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

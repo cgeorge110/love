@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
   def sent
   	
   end
+<<<<<<< HEAD
 
   def map
   	@notes = Note.all
@@ -18,4 +19,6 @@ class WelcomeController < ApplicationController
  		marker.infowindow "#{note.content}... lat: #{note.latitude} / lng: #{note.longitude} ... id: #{note.id}"
 	end
   end
+=======
+>>>>>>> 5c722712d0c26fd7248b0c96e2834c3a075a1f17
 end

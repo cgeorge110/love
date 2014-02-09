@@ -14,10 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 
+<<<<<<< HEAD
 
 // Loads all Bootstrap javascripts
 //= require bootstrap
 //= require underscore
 //= require gmaps/google
+=======
+// Loads all Bootstrap javascripts
+//= require bootstrap
+>>>>>>> 5c722712d0c26fd7248b0c96e2834c3a075a1f17
 
 //= require_tree .
