@@ -1,6 +1,7 @@
 $font-family-sans-serif: 'Arvo', serif;; 
 $font-family-serif: 'Stalemate', cursive;
 $font-size-h1: 8em;
+
 @media(max-width:767px){ h1: $font-size-h1 * 0.5; }
 @media(min-width:768px){ h1: $font-size-h1 * 0.8; }
 
@@ -59,8 +60,6 @@ body {
 	.heart {
 		/*height: 200px;
 		width: auto;*/
-		height: 200px;
-		width: auto;
 	}
 }
 
@@ -85,6 +84,7 @@ body {
 .gmap {
 	padding: 0 0 !important;
 }
+
 
 .entries { 
 	margin-top: 1em; 
