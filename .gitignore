@@ -13,12 +13,14 @@
 /tmp
 
 # Ignore other unneeded files.
-database.yml
+# database.yml
 doc/
 *.swp
 *~
 .project
 .DS_Store
 .idea
-.secret
-.elasticbeanstalk/
+.secret
+
+.elasticbeanstalk/
+
