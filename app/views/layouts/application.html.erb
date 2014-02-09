@@ -7,6 +7,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <%= yield :javascripts %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,7 +18,7 @@
 				<div class="text-center header-block">
 					<div class="col-xs-3 col-md-3">
 					<div class="left">
-						<%= image_tag "8bit-heart.png", class: "heart img-responsive" %>
+						<%= link_to_if !current_page?(root_url), image_tag("8bit-heart.png", class: "heart img-responsive"), root_path %>
 					</div>
 				</div>
 				<div class="col-xs-9 col-md-7">
@@ -30,7 +31,7 @@
 			</div>
 		</div>
 	</div>
-<div class="tiffany-wrapper">
+<div class="tiffany-wrapper <%= yield :page %>">
 <%= yield %>
 </div>
 	</div>

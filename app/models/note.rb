@@ -1,5 +1,6 @@
 class Note < ActiveRecord::Base
   has_many :tweets
+  has_many :emails
 
   geocoded_by :ip_address,
   :latitude => :latitude, :longitude => :longitude

@@ -1,8 +1,20 @@
 $font-family-sans-serif: 'Arvo', serif;; 
 $font-family-serif: 'Stalemate', cursive;
 $font-size-h1: 8em;
+
+@media(max-width:767px){ h1: $font-size-h1 * 0.5; }
+@media(min-width:768px){ h1: $font-size-h1 * 0.8; }
+
+
 @import "bootstrap";
 $dark-red: #7e131e;
+
+#map img { 
+  max-width: none;
+}
+#map label { 
+  width: auto; display:inline; 
+} 
 
 html, body { height: 100%; }
 body { 
@@ -46,8 +58,8 @@ body {
 		color: $dark-red !important;
 	}
 	.heart {
-		height: 200px;
-		width: auto;
+		/*height: 200px;
+		width: auto;*/
 	}
 }
 
@@ -58,8 +70,19 @@ body {
 
 .tiffany-wrapper {
 	width: 100%;
-	padding: 2em;
+	padding: 2em 0; /* was 2em all around */
 	background-color: #a4e7df;
+}
+
+.spread {
+	text-align: center;
+	padding: 0;
+	margin: 0.5em 0;
+	line-height: 2em;
+}
+
+.gmap {
+	padding: 0 0 !important;
 }
 
 .entries { 

@@ -5,6 +5,17 @@
 </div>
 <div class="row">
 	<div class="col-md-12 text-center">
-		<h3><%= link_to 'Click here', root_path %> to create another one.</h3>
+		<%= link_to root_url do %>
+		<h3 class="btn btn-danger btn-lg">Create another one love note.</h3>
+		<% end %>
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12 text-center">
+		
+		<%= link_to :spread, 'data-no-turbolink' => true do %>
+		<h3 class="btn btn-danger btn-lg">See love spread through the world.</h3>
+		<% end %>
 	</div>
 </div>
