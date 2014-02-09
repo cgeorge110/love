@@ -1,9 +1,7 @@
 class Note < ActiveRecord::Base
   has_many :tweets
-<<<<<<< HEAD
   has_many :emails
-=======
->>>>>>> 5c722712d0c26fd7248b0c96e2834c3a075a1f17
+
 
   geocoded_by :ip_address,
   :latitude => :latitude, :longitude => :longitude
