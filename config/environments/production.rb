@@ -68,8 +68,8 @@ Lovesya::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "email-smtp.us-west-2.amazonaws.com",
-    :user_name => 'AKIAJSEGVVIZUR2SMB3A',
-    :password => 'Au+wfkek7PnzvMX6OD/aWqn8vgrlwHqRcqzwS5b8xurG',
+    :user_name => <%= ENV['SES_USERNAME'] %>,
+    :password => <%= ENV['SES_PASSWORD'] %>,
     :authentication => :login,
     :enable_starttls_auto => true,
     :port => 465
