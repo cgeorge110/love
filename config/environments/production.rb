@@ -73,8 +73,6 @@ Lovesya::Application.configure do
     :authentication => :login,
     :enable_starttls_auto => true,
     :port => 465
-}
-
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
