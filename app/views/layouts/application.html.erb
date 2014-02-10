@@ -21,29 +21,29 @@
 					<div class="col-xs-3 col-md-3">
 						<%= link_to_if !current_page?(root_url), image_tag("8bit-heart.png", class: "heart img-responsive"), root_path %>
 					</div>
-				</div>
-				<div class="col-xs-9 col-md-7">
-					<h1 class="">
-					  <%= link_to_if !current_page?(root_url),"#whoLovesYou?", root_path %>
-					</h1>
-					<h3 class="white">inspiring love notes for the uninspired</h3>
+					<div class="col-xs-9 col-md-7">
+						<h1 class="">
+						  <%= link_to_if !current_page?(root_url),"#whoLovesYou?", root_path %>
+						</h1>
+						<h3 class="white">inspiring love notes for the uninspired</h3>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-<div class="tiffany-wrapper <%= yield :page %>">
-<%= yield %>
+	<div class="tiffany-wrapper <%= yield :page %>">
+	<%= yield %>
+	</div>
 </div>
-	</div>
-	</div>
-	<% if current_page?(root_url) %>
+
+<% if current_page?(root_url) %>
 	<div id="footer">
 	  <div class="container">
 		<p class="text-muted">* We do not condone Instagram stalking...but, a word of advice: don’t double-tap.</p>
 	  </div>
 	</div>
-	<% end %>
-	<%= render 'layouts/analytics' %>
+<% end %>
+<%= render 'layouts/analytics' %>
 </body>
 </html>
