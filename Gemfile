@@ -21,6 +21,9 @@ group :production do
   gem 'mysql2'
 end
 
+# email validation
+gem 'email_validator'
+
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
