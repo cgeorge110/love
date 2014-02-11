@@ -15,7 +15,12 @@ class WelcomeController < ApplicationController
   	@hash = Gmaps4rails.build_markers(@notes) do |note, marker|
   		marker.lat note.latitude
  		marker.lng note.longitude
- 		marker.infowindow "#{note.content}... lat: #{note.latitude} / lng: #{note.longitude} ... id: #{note.id}"
+ 		marker.picture({
+                  :picture => "#{Rails.root}/app/assets/images/hearts_maps.png",
+                  :width   => 32,
+                  :height  => 32
+                 })
+ 		#marker.infowindow "#{note.content}... lat: #{note.latitude} / lng: #{note.longitude} ... id: #{note.id}"
 	end
   end
 
