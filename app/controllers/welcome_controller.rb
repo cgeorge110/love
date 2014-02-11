@@ -16,9 +16,9 @@ class WelcomeController < ApplicationController
   		marker.lat note.latitude
  		marker.lng note.longitude
  		marker.picture({
-                  :picture => 'assets/hearts_maps.png',
-                  :width   => '32',
-                  :height  => '32'
+                  "picture" => 'assets/hearts_maps.png',
+                  "width"   => '32',
+                  "height"  => '32'
                  })
  		#marker.infowindow "#{note.content}... lat: #{note.latitude} / lng: #{note.longitude} ... id: #{note.id}"
 	end
