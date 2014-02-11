@@ -3,9 +3,9 @@ class Email < ActiveRecord::Base
 	validates :to, :presence => true
 	validates :getter_email,   
             :presence => true,   
-            :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+            :format => { :with => \b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b }
     validates :from, :presence => true
     validates :sender_email,   
             :presence => true,   
-            :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+            :format => { :with => \b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b }
 end
