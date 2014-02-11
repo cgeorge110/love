@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
   		marker.lat note.latitude
  		marker.lng note.longitude
  		marker.picture({
-                  :picture => "#{Rails.root}/app/assets/images/hearts_maps.png",
+                  :picture => view_context.image_path("hearts_maps.png"),
                   :width   => 32,
                   :height  => 32
                  })
