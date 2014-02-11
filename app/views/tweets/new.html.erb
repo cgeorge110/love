@@ -5,12 +5,13 @@
 </div>
 
 <%= form_for @tweet, :html => {:class => 'form-horizontal'} do |t| %>
+<%= render "shared/error_messages", :target => @tweet %>
 <%= t.hidden_field :note_id, :value => @note.id %>
 <div class="entries">
 
 
       	<div class="form-group">
-      		<%= t.label :to, 'To: @', :class => 'col-md-1 control-label col-md-offset-3' %>
+      		<%= t.label :to, 'To: @', :class => 'col-md-2 control-label col-md-offset-3' %>
 	      	<div class="col-md-4">
 	      		<%= t.text_field :to, :class => 'form-control' %>      
 	      	</div>
@@ -20,7 +21,7 @@
 
 
       	<div class="form-group">
-      		<%= t.label :from, 'From: @', :class => 'col-md-1 control-label col-md-offset-3 ' %>
+      		<%= t.label :from, 'From: @', :class => 'col-md-2 control-label col-md-offset-3 ' %>
 	      	<div class="col-md-4">
 	      		<%= t.text_field :from, :class => 'form-control' %>      
 	      	</div>

@@ -7,32 +7,33 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2 text-center">
 <%= form_for @email, :html => {:class => 'form-horizontal'} do |e| %>
+<%= render "shared/error_messages", :target => @email %>
 <%= e.hidden_field :note_id, :value => @note.id %>
-<div class="entries">
-  <div class="form-group">
-      		<%= e.label :to, 'To Name: ', :class => 'col-md-1 control-label col-md-offset-3' %>
-	      	<div class="col-md-4">
-	      		<%= e.text_field :to, :class => 'form-control' %>      
-	      	</div>
-      	</div>
-        <div class="form-group">
-          <%= e.label :getter_email, 'To Email: ', :class => 'col-md-1 control-label col-md-offset-3' %>
-          <div class="col-md-4">
-            <%= e.text_field :getter_email, :class => 'form-control' %>      
-          </div>
-        </div>
+  <div class="entries">
+    <div class="form-group">
+  		<%= e.label :to, 'To Name: ', :class => 'col-md-2 control-label col-md-offset-3' %>
+    	<div class="col-md-4">
+    		<%= e.text_field :to, :class => 'form-control' %>      
+    	</div>
+  	</div>
+    <div class="form-group">
+      <%= e.label :getter_email, 'To Email: ', :class => 'col-md-2 control-label col-md-offset-3' %>
+      <div class="col-md-4">
+        <%= e.text_field :getter_email, :class => 'form-control' %>      
+      </div>
+    </div>
 
 
 
 
       	<div class="form-group">
-      		<%= e.label :from, 'From Name: ', :class => 'col-md-1 control-label col-md-offset-3 ' %>
+      		<%= e.label :from, 'From Name: ', :class => 'col-md-2 control-label col-md-offset-3 ' %>
 	      	<div class="col-md-4">
 	      		<%= e.text_field :from, :class => 'form-control' %>      
 	      	</div>
       	</div>
         <div class="form-group">
-          <%= e.label :sender_email, 'From Email: ', :class => 'col-md-1 control-label col-md-offset-3 ' %>
+          <%= e.label :sender_email, 'From Email: ', :class => 'col-md-2 control-label col-md-offset-3 ' %>
           <div class="col-md-4">
             <%= e.text_field :sender_email, :class => 'form-control' %>      
           </div>
