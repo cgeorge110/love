@@ -1,4 +1,9 @@
 class EmailsController < ApplicationController
+  before_filter :require_login, only: [:index]
+  def index
+    @emails = Email.all
+  end
+
   def new
   	@email = Email.new
   	@note = Note.find(params[:note])

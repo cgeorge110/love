@@ -40,7 +40,8 @@ class NotesController < ApplicationController
   def destroy
     @note.destroy
     
-      redirect_to note_url
+      redirect_to :action => 'list'
+  end
    
   end
 

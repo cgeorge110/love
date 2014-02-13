@@ -36,9 +36,7 @@ class MessagesController < ApplicationController
 
   def destroy
     @message.destroy
-    
-      redirect_to message_url
-   
+      redirect_to :action => 'list'
   end
 
   
