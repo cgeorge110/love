@@ -12,7 +12,7 @@ Lovesya::Application.routes.draw do
   resources :emails
   get '/sent', to: 'welcome#sent'
   get 'login' => 'sessions#new', :as => :login
-  post 'logout' => 'sessions#destroy', :as => :logout
+  get 'logout' => 'sessions#destroy', :as => :logout
   get 'spreading-love' => 'welcome#map', :as => :spread
 
   # The priority is based upon order of creation: first created -> highest priority.
