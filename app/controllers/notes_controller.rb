@@ -41,8 +41,7 @@ class NotesController < ApplicationController
     @note.destroy
     
       redirect_to :action => 'list'
-  end
-   
+    
   end
 
   private
