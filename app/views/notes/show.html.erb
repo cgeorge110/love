@@ -7,22 +7,14 @@
 </div>
 
 <div class="row send-it" style="margin-top: 1em;">
-	<div class="col-md-6 col-md-offset-3 send">
+	<div class="col-md-8 col-md-offset-2 send">
 		<div class="row">
-			<div class="col-md-6"><%= link_to image_tag( "tweet.gif", class: "icon" ), new_tweet_path(:note => @note.id) %></div>
-			<div class="col-md-6"><%= link_to image_tag( "email.gif", class: "icon" ), new_email_path(:note => @note.id) %></div>
+			<div class="col-md-4"><%= link_to image_tag( "facebook.gif", class: "icon" ), fb_new_path(:note => @note.id) %></div>
+			<div class="col-md-4"><%= link_to image_tag( "tweet.gif", class: "icon" ), new_tweet_path(:note => @note.id) %></div>
+			<div class="col-md-4"><%= link_to image_tag( "email.gif", class: "icon" ), new_email_path(:note => @note.id) %></div>
 		</div>
 	</div>
 </div>
-
-<div class="row" style="margin-top: 1em;">
-	<div class="col-md-6 col-md-offset-3">
-		<div class="row">
-			<div class="col-md-6"><%= link_to "FACEBOOK", fb_new_path(:note => @note.id) %></div>
-		</div>
-	</div>
-</div>
-
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3 center">
