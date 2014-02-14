@@ -43,8 +43,8 @@ class FbShareController < ApplicationController
   private
 
   def client
-  	key = "611210762283744"
-  	secret = "cafb7a1d918c6a9aad7f7cb77a0ed13e"
+  	key = ENV['FB_KEY']
+  	secret = ENV['FB_SECRET_KEY']
   	fb_auth = FbGraph::Auth.new(key, secret)
   	client = fb_auth.client
   	client.redirect_uri = "http://#{request.host_with_port}/fb_share/callback"
