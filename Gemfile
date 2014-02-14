@@ -15,6 +15,9 @@ gem 'geocoder'
 # google maps 
 gem 'gmaps4rails'
 
+# gem 'fb_graph'
+gem 'fb_graph'
+
 group :production do
   #gem 'pg'
   #gem 'rails_12factor'

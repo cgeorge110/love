@@ -14,6 +14,9 @@ Lovesya::Application.routes.draw do
   get 'login' => 'sessions#new', :as => :login
   get 'logout' => 'sessions#destroy', :as => :logout
   get 'spreading-love' => 'welcome#map', :as => :spread
+  get '/fb_share/new' => 'fb_share#new', :as => :fb_new
+  post '/fb_share/auth' => 'fb_share#auth', :as => :fb_auth
+  get '/fb_share/callback', to: 'fb_share#callback', as: :fb_callback
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
